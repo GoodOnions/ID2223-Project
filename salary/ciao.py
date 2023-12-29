@@ -1,8 +1,9 @@
 import requests
 
-def get_gdp_by_country_code(country_code):
+def get_gdp_by_country_code(country_code, year=2023, index='FP.CPI.TOTL'):
     # World Bank API endpoint for GDP data
-    api_url = f'http://api.worldbank.org/v2/country/{country_code}/indicator/NY.GDP.MKTP.CD?format=json'
+    api_url = f'http://api.worldbank.org/v2/country/{country_code}/indicator/{index}?data={year}&format=json'
+
 
     # Make a GET request to the API
     response = requests.get(api_url)
@@ -22,7 +23,7 @@ def get_gdp_by_country_code(country_code):
         return None
 
 # Example usage
-country_code = 'ITA'
+country_code = 'USA'
 gdp_value = get_gdp_by_country_code(country_code)
 
 if gdp_value is not None:
