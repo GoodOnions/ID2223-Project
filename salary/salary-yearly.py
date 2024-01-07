@@ -13,6 +13,9 @@ def fetch_data():
 def prepare_data(dataset: pd.DataFrame):
     ## We need to apply the same transformations used during the EDA
 
+    quantile = dataset['salary_in_usd'].quantile(0.99)
+    dataset = dataset[dataset['salary_in_usd'] < quantile]
+    
     dataset['salary'] = dataset['salary_in_usd']
     dataset.drop(columns=['salary_in_usd','employee_residence', 'remote_ratio'], inplace=True)
 
