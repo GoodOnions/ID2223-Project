@@ -20,3 +20,9 @@ Following the completion of an exploratory data analysis (EDA), we identified th
 Simultaneously, we've implemented Hopsworks for efficient data and model storage, utilized GitHub Actions for the annual execution of our data fetching processes and training pipeline. For the application interface, we've harnessed the power of Hugging Face integrated with Gradio.
 
 To ensure the continuous relevance of our data, we've established a robust yearly fetching infrastructure. This comprehensive approach covers the entire spectrum from data analysis to model deployment, creating a streamlined and effective system for personalized salary predictions.
+
+## Index
+1. [Exploratory data analysis (EDA)](./salary/salary-eda.ipynb)
+2. [Model training](./salary/salary-training-pipeline.ipynb)
+3. [Data fetching pipeline (yearly)](./salary/salary-yearly.py)
+4. [Hugging face application](https://huggingface.co/spaces/GoodOnions/ID2223-Project)
