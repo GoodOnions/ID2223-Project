@@ -5,7 +5,7 @@ import datetime
 import hopsworks
 
 def fetch_data():
-    year = datetime.date.today().year
+    year = datetime.date.today().year - 1
     data = pd.read_csv("https://ai-jobs.net/salaries/download/salaries.csv")
     data = data[data["work_year"] == year]
     return data
